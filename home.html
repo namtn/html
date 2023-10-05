@@ -6,7 +6,6 @@
         try {
             const locationX = await getLocation()
             alert('xxx: ' + JSON.stringify(locationX))
-
         } catch (error) {
             alert('xxx: ' + error)
         }
@@ -17,33 +16,36 @@
 
 
     const getLocation = () => new Promise((resolve, reject) => {
-        try {
-            navigator.permissions.query({
-                name: 'geolocation'
-            }).then(function (status) {
-                if (status?.state === "granted" || status?.state === "prompt") {
-                    if (navigator.geolocation) {
-                        navigator.geolocation.getCurrentPosition((position) => {
-                            var lat = position?.coords?.latitude;
-                            var long = position?.coords?.longitude;
-                            var location = {
-                                lat: lat,
-                                long: long
-                            }
-                            currentPosition = location
-                            resolve(location)
-                        },
-                            possitonError => {
-                                resolve(null)
-                            });
+        
+      //  if (navigator.permissions && navigator.permissions.query) {
+            try {
+                undefined.query({
+                    name: 'geolocation'
+                }).then(function (status) {
+                    if (status?.state === "granted" || status?.state === "prompt") {
+                        if (navigator.geolocation) {
+                            navigator.geolocation.getCurrentPosition((position) => {
+                                var lat = position?.coords?.latitude;
+                                var long = position?.coords?.longitude;
+                                var location = {
+                                    lat: lat,
+                                    long: long
+                                }
+                                currentPosition = location
+                                resolve(location)
+                            },
+                                possitonError => {
+                                    resolve(null)
+                                });
+                        }
+                        else resolve(null)
                     }
                     else resolve(null)
-                }
-                else resolve(null)
-            });
-        } catch (error) {
-            resolve(null)
-        }
+                });
+            } catch (error) {
+                resolve(null)
+            }
+        //}
     })
 
     xxx();
