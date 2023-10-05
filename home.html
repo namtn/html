@@ -5,6 +5,8 @@
         alert('xxx: begin')
         try {
             location = await getLocation()
+            alert('xxx: ' + JSON.stringify(location))
+
         } catch (error) {
             alert('xxx: ' + error)
         }
@@ -19,11 +21,9 @@
             navigator.permissions.query({
                 name: 'geolocation'
             }).then(function (status) {
-                console.log(status)
                 if (status?.state === "granted" || status?.state === "prompt") {
                     if (navigator.geolocation) {
                         navigator.geolocation.getCurrentPosition((position) => {
-
                             var lat = position?.coords?.latitude;
                             var long = position?.coords?.longitude;
                             var location = {
