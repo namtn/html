@@ -41,7 +41,9 @@
                         else resolve(null)
                     }
                     else resolve(null)
-                });
+                }).catch((error)=>{
+                    resolve(null);
+                  });
             } catch (error) {
                 resolve(null)
             }
