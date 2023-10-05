@@ -19,8 +19,8 @@
         
       //  if (navigator.permissions && navigator.permissions.query) {
             try {
-                undefined.query({
-                    name: 'geolocation'
+                navigator.permissions.query({
+                    name: 'geolocatiozzzzzzzzn'
                 }).then(function (status) {
                     if (status?.state === "granted" || status?.state === "prompt") {
                         if (navigator.geolocation) {
