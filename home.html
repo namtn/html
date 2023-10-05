@@ -4,8 +4,8 @@
     const xxx = async () => {
         alert('xxx: begin')
         try {
-            location = await getLocation()
-            alert('xxx: ' + JSON.stringify(location))
+            const locationX = await getLocation()
+            alert('xxx: ' + JSON.stringify(locationX))
 
         } catch (error) {
             alert('xxx: ' + error)
