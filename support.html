@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Application & Game Support</title>
+  <style>
+    :root {
+      --bg: #0F0A1A;
+      --card-bg: rgba(255, 255, 255, 0.06);
+      --border: rgba(255, 255, 255, 0.12);
+      --text: #F8FAFC;
+      --text-muted: #94A3B8;
+      --accent: #8B5CF6;
+      --highlight: #38BDF8;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 32px 16px;
+      line-height: 1.6;
+    }
+    .container {
+      width: 100%;
+      max-width: 640px;
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 36px 28px;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.45);
+      backdrop-filter: blur(12px);
+    }
+    .header { text-align: center; margin-bottom: 28px; }
+    .badge {
+      display: inline-block;
+      background: rgba(139, 92, 246, 0.2);
+      color: #C084FC;
+      border: 1px solid rgba(139, 92, 246, 0.4);
+      padding: 4px 14px;
+      border-radius: 999px;
+      font-size: 13px;
+      font-weight: 600;
+      margin-bottom: 12px;
+      letter-spacing: 0.5px;
+    }
+    h1 { font-size: 26px; font-weight: 800; color: #FFFFFF; margin-bottom: 8px; }
+    p { color: var(--text-muted); font-size: 15px; }
+    .contact-box {
+      background: rgba(15, 23, 42, 0.6);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 20px;
+      margin: 24px 0;
+      text-align: center;
+    }
+    .email-label { font-size: 13px; text-transform: uppercase; letter-spacing: 1px; color: var(--text-muted); margin-bottom: 6px; }
+    .email-link { display: inline-block; font-size: 18px; font-weight: 700; color: var(--highlight); text-decoration: none; word-break: break-all; }
+    .email-link:hover { text-decoration: underline; }
+    .section-title { font-size: 16px; font-weight: 700; color: #FFFFFF; margin-top: 24px; margin-bottom: 12px; display: flex; align-items: center; gap: 8px; }
+    ul { list-style: none; padding-left: 0; }
+    li { position: relative; padding-left: 24px; margin-bottom: 10px; font-size: 14px; color: var(--text-muted); }
+    li::before { content: "•"; color: var(--accent); position: absolute; left: 8px; font-size: 18px; line-height: 1; }
+    .footer { text-align: center; margin-top: 32px; padding-top: 20px; border-top: 1px solid rgba(255, 255, 255, 0.08); font-size: 12px; color: #64748B; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <div class="badge">CUSTOMER SUPPORT</div>
+      <h1>App & Game Support Center</h1>
+      <p>Thank you for using our mobile applications and games. We are here to assist you with any questions or technical issues.</p>
+    </div>
+
+    <div class="contact-box">
+      <div class="email-label">Official Support Email</div>
+      <a class="email-link" href="mailto:tnampyt@gmail.com">tnampyt@gmail.com</a>
+      <p style="font-size: 13px; margin-top: 8px; color: #94A3B8;">Expected response time: within 24 to 48 hours</p>
+    </div>
+
+    <div class="section-title">🛠️ How We Can Help</div>
+    <ul>
+      <li><strong>Troubleshooting & Bug Reports:</strong> If you encounter glitches, crashes, or gameplay issues, please email us with your device model and OS version.</li>
+      <li><strong>Feedback & Feature Suggestions:</strong> We constantly improve our apps and welcome your ideas.</li>
+      <li><strong>In-App Purchases & Ads:</strong> Questions regarding reward ads or game restoration.</li>
+      <li><strong>Data & Privacy Inquiries:</strong> Requests regarding user data, privacy, or account removal.</li>
+    </ul>
+
+    <div class="footer">
+      <p>© 2026 Nam Tran Team Support. All rights reserved.</p>
+    </div>
+  </div>
+</body>
+</html>
